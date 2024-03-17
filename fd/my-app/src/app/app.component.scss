@@ -16,4 +16,45 @@
   }
   .content {
     padding: var(--content-padding);
+    width: 100%;
+    display:flex;
+        flex: 1;
+
+
+  }
+  section{
+    display: flex;
+    flex: 1;
+    height:90vh;
+    top:0;
+    bottom: 0;
+  }
+  .secside{
+    display:flex;
+ justify-content: space-around;
+    flex-direction: row;
+    max-width: 13vw;
+    width: 100%;
+flex:1;
+top: 0; 
+bottom: 0; }
+  .seccontent{
+     justify-content: space-around;
+    flex-direction: column;
+    width: 100%;
+    background: #e1e8da;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+  }
+  .brand-name{
+    color:#343633;
+    background:#b6db91;
+    height:10vh;
+  }
+  .brand-nameh1{
+    color:#343633;
+    background:#b6db91;
+
+ 
   }

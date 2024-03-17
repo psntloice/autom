@@ -3,14 +3,23 @@ import { RouterOutlet } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import { CommonModule } from '@angular/common';
+import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatButtonModule} from '@angular/material/button';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HomeComponent, SidebarComponent, MatSlideToggleModule, ],
+  imports: [CommonModule, MatToolbarModule, MatIconModule, RouterOutlet,MatButtonModule, HomeComponent, SidebarComponent, MatSlideToggleModule, ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+  showSidebar = true;
+
+  toggleSidebar() {
+    this.showSidebar = !this.showSidebar;
+  }
   title = 'my-app';
 }

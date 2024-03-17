@@ -34,7 +34,18 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
-
+.mycontain{
+  margin: 0;
+  top: 0;
+  padding: 0;
+  height: 100%;
+}
+.seccontent{
+  display: flex;
+   justify-content: space-around;
+  flex-direction: column;
+  -ms-flex-item-align: auto;
+}
   h1 {
     font-size: 3.125rem;
     color: var(--gray-900);
@@ -52,36 +63,26 @@
     color: var(--gray-700);
   }
 
-  main {
+  /* main {
     width: 100%;
     min-height: 100%;
     /* display: flex; */
-    justify-content: center;
+    /* justify-content: center;
     align-items: center;
     padding: 1rem;
     box-sizing: inherit;
     position: relative;
-  }
+  } */ 
 
   .angular-logo {
     max-width: 9.2rem;
   }
 
-  .content {
+  section{
     display: flex;
-    justify-content: space-around;
-    width: 100%;
-    max-width: 700px;
-    margin-bottom: 3rem;
   }
 
-  .content h1 {
-    margin-top: 1.75rem;
-  }
 
-  .content p {
-    margin-top: 1.5rem;
-  }
 
   .divider {
     width: 1px;
@@ -168,15 +169,20 @@
   }
 </style>
 
-<main>
+<main class="mycontain">
   <header class="brand-name">
-    <img class="brand-logo" src="/assets/logo.svg" alt="logo" aria-hidden="true">
-   <h1> Automobile App</h1>
+    <mat-toolbar class="brand-nameh1">
+    <button mat-icon-button  (click)="toggleSidebar()" color="accent" aria-label="Example icon button with a menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+    <span><h1 class="brand-nameh1"> Automobile App</h1></span>
+  </mat-toolbar>
+
   </header>
   <section class="content">
-    <app-sidebar></app-sidebar>
-    <app-home></app-home>
-    <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+    <app-sidebar *ngIf="showSidebar" class="secside"></app-sidebar>
+    <app-home class="seccontent"></app-home>
   </section>
 </main>
 
