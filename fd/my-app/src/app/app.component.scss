@@ -28,16 +28,22 @@
     height:90vh;
     top:0;
     bottom: 0;
+    overflow-y: hidden;
+overflow-x: visible;
   }
   .secside{
     display:flex;
+    // position: fixed;
  justify-content: space-around;
     flex-direction: row;
     max-width: 13vw;
     width: 100%;
 flex:1;
 top: 0; 
-bottom: 0; }
+bottom: 0; 
+
+
+  }
   .seccontent{
      justify-content: space-around;
     flex-direction: column;
@@ -46,15 +52,20 @@ bottom: 0; }
     bottom: 0;
     top: 0;
     height: 100%;
+    overflow:scroll;
   }
   .brand-name{
     color:#343633;
     background:#b6db91;
     height:10vh;
+    display: flex;
+    justify-content: space-between;
   }
   .brand-nameh1{
     color:#343633;
     background:#b6db91;
+    width: 100%;
 
+justify-content: space-between;
  
   }
