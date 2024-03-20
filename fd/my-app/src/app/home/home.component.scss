@@ -2,14 +2,22 @@
 display:flex;
 flex: 1;
 justify-content: space-between;
+flex-flow: row;
+flex-direction: row; 
 }
+
 .mycard{
     padding: 10px;
     flex-direction: row; 
     flex-flow: row; 
-    margin: 20px;
+    // margin: 20px;
     max-width: 15vw;
+    
+}
+.drows{
+    display: flex;
+    flex-direction: column; 
+
 }
 .content{
-    padding: 10px;
-}
+display: flex;}
