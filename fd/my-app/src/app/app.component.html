@@ -106,8 +106,10 @@
 <main class="mycontain">
   <header class="brand-name">
     <mat-toolbar class="brand-nameh">
-    <button mat-icon-button  (click)="toggleSidebar()" color="accent" aria-label="Example icon button with a menu icon">
-      <mat-icon>menu</mat-icon>
+    <button mat-icon-button  (click)="toggleSidebar()" color="#343633" aria-label="Example icon button with a menu icon">
+      <!-- <mat-icon>menu</mat-icon> -->
+      <fa-icon [icon]="faBars"></fa-icon>
+
     </button>
 
     <span><h1 class="brand-nameh1"> Automobile App</h1></span>

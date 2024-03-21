@@ -1,23 +1,33 @@
+.content{
+    display: flex;
+    flex:1;
+    height: 100%;
+    overflow: scroll;
+    }
+
 .mycarddiv{
-display:flex;
 flex: 1;
 justify-content: space-between;
-flex-flow: row;
-flex-direction: row; 
+box-sizing: border-box;
+margin: 2vh;
 }
 
-.mycard{
-    padding: 10px;
-    flex-direction: row; 
-    flex-flow: row; 
-    // margin: 20px;
-    max-width: 15vw;
-    
-}
+
 .drows{
     display: flex;
-    flex-direction: column; 
+    flex-direction: row; 
+width: 100%;
+justify-content: space-around;
 
+flex: 1;
 }
-.content{
-display: flex;}
+.mycard{
+    padding: 10px;
+    flex-direction: column; 
+    width: 23vw;
+    height: 22vh;
+margin-bottom: 4vh;
+margin-top: 4vh;
+// background-color: #95b079;
+background: linear-gradient(to right, #b6db91, #619e55);
+}

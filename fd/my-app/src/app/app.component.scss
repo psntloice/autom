@@ -43,18 +43,11 @@
 //       Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
 //       "Segoe UI Symbol";
 //   }
-//   .brand-nameh{
-  //     display: flex;
-//     color:#343633;
-//     background:#b6db91;
-//     width: 100%;
-// justify-content: space-between;
- 
-//   }
+
 .mycontain {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   flex-basis: 0;
   box-sizing: border-box;
@@ -64,17 +57,25 @@
 }
 
 .brand-name {
-  // position: fixed; /* Fix the header at the top */
   top: 0;
   left: 0;
   box-sizing: border-box;
   height: fit-content;
 margin: 0;
 padding: 0;
+    color:#343633;
+    background:#b6db91;
   width: 100%; /* Take full width of the viewport */
   // z-index: 1000; /* Ensure header is above other content */
 }
-
+  .brand-nameh{
+      display: flex;
+      color:#343633;
+      background: linear-gradient(to bottom, #aed18a, #b6db91);
+    width: 100%;
+justify-content: space-between;
+ 
+  }
 .content {
   display: flex;
   top: 0;
