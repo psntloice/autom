@@ -13,12 +13,16 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { far } from '@fortawesome/free-regular-svg-icons';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import {RouterLink, RouterLinkActive} from '@angular/router';
+// Import your components here
+import { SparePartComponent } from './spare-part/spare-part.component';
+// ... other component imports
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, MatToolbarModule, MatIconModule, RouterOutlet,MatButtonModule, HomeComponent, SidebarComponent, MatSlideToggleModule, FontAwesomeModule,],
+  imports: [RouterOutlet, RouterLink, CommonModule, MatToolbarModule, MatIconModule, RouterOutlet,MatButtonModule, HomeComponent, SidebarComponent, MatSlideToggleModule, FontAwesomeModule,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
@@ -32,3 +36,6 @@ export class AppComponent {
   faBell = faBell;
   faBars = faBars;
 }
+
+
+

@@ -119,7 +119,12 @@
   </header>
   <section class="content">
     <app-sidebar *ngIf="showSidebar" class="secside"></app-sidebar>
-    <app-home class="seccontent"></app-home>
+    <nav>
+      <a class="button" routerLink=" ">Crisis Center</a> |
+      <a class="button" routerLink="/spares">Heroes</a>
+    </nav>
+    <!-- <app-home class="seccontent"></app-home> -->
+    <router-outlet></router-outlet>
   </section>
 </main>
 
