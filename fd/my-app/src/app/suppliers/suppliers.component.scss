@@ -1,0 +1,13 @@
+.content{
+    display: flex;
+    flex:1;
+    height: 100%;
+    overflow: scroll;
+    }
+
+.mycarddiv{
+flex: 1;
+justify-content: space-between;
+box-sizing: border-box;
+margin: 2vh;
+}

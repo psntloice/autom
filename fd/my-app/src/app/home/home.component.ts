@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
-import { SidebarComponent } from '../sidebar/sidebar.component';
 import {MatCardModule} from '@angular/material/card';
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ SidebarComponent, MatCardModule],
+  imports: [ MatCardModule],
     templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })

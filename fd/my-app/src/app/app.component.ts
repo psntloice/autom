@@ -9,20 +9,15 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatButtonModule} from '@angular/material/button';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { fas } from '@fortawesome/free-solid-svg-icons';
-import { far } from '@fortawesome/free-regular-svg-icons';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-import {RouterLink, RouterLinkActive} from '@angular/router';
-// Import your components here
-import { SparePartComponent } from './spare-part/spare-part.component';
-// ... other component imports
+
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, RouterLink, CommonModule, MatToolbarModule, MatIconModule, RouterOutlet,MatButtonModule, HomeComponent, SidebarComponent, MatSlideToggleModule, FontAwesomeModule,],
+  imports: [RouterOutlet, CommonModule, MatToolbarModule, MatIconModule, RouterOutlet,MatButtonModule, HomeComponent, SidebarComponent, MatSlideToggleModule, FontAwesomeModule,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
