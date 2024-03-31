@@ -3,8 +3,92 @@
     <!-- <h1>{{ title }}</h1> -->
     
     <div class="mycarddiv">
-   hey
-   <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 demo-table">
+
+      <div>
+        <h3>Car Brands</h3>
+      </div>
+  
+      <table mat-table [dataSource]="brandsDataSource" class="mat-elevation-z8 demo-table">
+        <!-- Brand Column -->
+        <ng-container matColumnDef="brand">
+          <th mat-header-cell *matHeaderCellDef>Brand</th>
+          <td mat-cell *matCellDef="let element">{{element.brand}}</td>
+        </ng-container>
+  
+        <!-- Number of Models Column -->
+        <ng-container matColumnDef="numModels">
+          <th mat-header-cell *matHeaderCellDef>Number of Models</th>
+          <td mat-cell *matCellDef="let element">{{element.numModels}}</td>
+        </ng-container>
+  
+        <!-- Market Segment Column -->
+        <ng-container matColumnDef="marketSegment">
+          <th mat-header-cell *matHeaderCellDef>Market Segment</th>
+          <td mat-cell *matCellDef="let element">{{element.marketSegment}}</td>
+        </ng-container>
+  
+        <!-- Sales Performance Column -->
+        <ng-container matColumnDef="salesPerformance">
+          <th mat-header-cell *matHeaderCellDef>Sales Performance</th>
+          <td mat-cell *matCellDef="let element">{{element.salesPerformance}}</td>
+        </ng-container>
+  
+        <!-- Brand Value Column -->
+        <ng-container matColumnDef="brandValue">
+          <th mat-header-cell *matHeaderCellDef>Brand Value</th>
+          <td mat-cell *matCellDef="let element">{{element.brandValue}}</td>
+        </ng-container>
+  
+        <!-- Innovation and Technology Column -->
+        <ng-container matColumnDef="innovationTech">
+          <th mat-header-cell *matHeaderCellDef>Innovation and Technology</th>
+          <td mat-cell *matCellDef="let element">{{element.innovationTech}}</td>
+        </ng-container>
+  
+        <!-- Global Presence Column -->
+        <ng-container matColumnDef="globalPresence">
+          <th mat-header-cell *matHeaderCellDef>Global Presence</th>
+          <td mat-cell *matCellDef="let element">{{element.globalPresence}}</td>
+        </ng-container>
+  
+        <!-- Customer Satisfaction Column -->
+        <ng-container matColumnDef="customerSatisfaction">
+          <th mat-header-cell *matHeaderCellDef>Customer Satisfaction</th>
+          <td mat-cell *matCellDef="let element">{{element.customerSatisfaction}}</td>
+        </ng-container>
+  
+        <!-- Brand History Column -->
+        <ng-container matColumnDef="brandHistory">
+          <th mat-header-cell *matHeaderCellDef>Brand History</th>
+          <td mat-cell *matCellDef="let element">{{element.brandHistory}}</td>
+        </ng-container>
+  
+        <!-- Table rows -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+        <!-- <tr mat-row 
+            (click)="clickedRows.add(row)" 
+            [class.demo-row-is-clicked]="clickedRows.has(row)" 
+            *matRowDef="let row; columns: displayedColumns1;"></tr> -->
+            <tr mat-row 
+            
+            *matRowDef="let row; columns: displayedColumns1;"></tr>
+      </table>
+  
+      <!-- Paginator -->
+      <!-- <mat-paginator [pageSizeOptions]="[5, 10, 20]" 
+                     showFirstLastButtons 
+                     aria-label="Select page of car brands">
+      </mat-paginator> -->
+
+      <div style="margin-top: 40px;">
+                <button (click)="switchCarType('mercedes')">Mercedes</button>
+        <button (click)="switchCarType('toyota')">Toyota</button>
+        <button (click)="switchCarType('suzuki')">Suzuki</button>
+
+        <h3>{{ selectedBrand }}</h3>
+      </div>
+
+      <table mat-table [dataSource]="carsDataSource" class="mat-elevation-z8 demo-table">
     <!-- Position Column -->
     <ng-container matColumnDef="position">
       <th mat-header-cell *matHeaderCellDef>No.</th>
@@ -43,13 +127,14 @@
         *matRowDef="let row; columns: displayedColumns;"
     ></tr>
   </table>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                 showFirstLastButtons
+                 aria-label="Select page of periodic elements">
+  </mat-paginator>
   
-  <div>
-    <h3>
-      Click Log
-    </h3>
-  </div>
-  
+ 
+ 
   <!-- @if (!clickedRows.color) {
     <div>Clicked rows will be logged here</div>
   } -->

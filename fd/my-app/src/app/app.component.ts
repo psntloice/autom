@@ -13,6 +13,12 @@ import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
+import { map } from 'rxjs/operators';
+
+
+
+
 
 @Component({
   selector: 'app-root',
@@ -30,6 +36,19 @@ export class AppComponent {
   title = 'my-app';
   faBell = faBell;
   faBars = faBars;
+
+  constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngOnInit() {
+    this.breakpointObserver.observe([
+      Breakpoints.XSmall,
+      Breakpoints.Small
+    ]).pipe(
+      map(result => result.matches)
+    ).subscribe(matches => {
+      this.showSidebar = !matches;
+    });
+  }
 }
 
 

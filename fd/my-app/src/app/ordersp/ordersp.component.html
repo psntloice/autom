@@ -3,8 +3,43 @@
     <!-- <h1>{{ title }}</h1> -->
     
     <div class="mycarddiv">
-   hey
-    
+<!-- Order Form Component -->
+<!-- <form (ngSubmit)="submitOrder()" #orderForm="ngForm">
+    <label for="itemName">Item Name</label>
+    <input type="text" id="itemName" name="itemName" ngModel required>
+  
+    <label for="quantity">Quantity</label>
+    <input type="number" id="quantity" name="quantity" ngModel required>
+  
+  
+    <button type="submit" [disabled]="orderForm.invalid">Submit Order</button>
+  </form> -->
+
+
+
+  <form class="order-form" (ngSubmit)="submitOrder()" #orderForm="ngForm">
+    <div class="form-group">
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" name="itemName" ngModel required>
+    </div>
+  
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" ngModel required>
+    </div>
+  
+    <!-- Add more form fields as needed -->
+  
+    <button type="submit" [disabled]="orderForm.invalid" class="submit-button">Submit Order</button>
+  </form>
+  
+  
+  <!-- Order Confirmation Component -->
+  <!-- <div *ngIf="orderSubmitted">
+    <h2>Order Confirmation</h2>
+    <p>Your order has been successfully submitted. Thank you!</p>
+  </div> -->
+      
     </div>
     
     </section>
