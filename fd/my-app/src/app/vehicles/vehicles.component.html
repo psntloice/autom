@@ -8,7 +8,7 @@
         <h3>Car Brands</h3>
       </div>
   
-      <table mat-table [dataSource]="brandsDataSource" class="mat-elevation-z8 demo-table">
+      <table mat-table [dataSource]="brandsDataSource" class="mat-elevation-z8 demo-table mytabcls">
         <!-- Brand Column -->
         <ng-container matColumnDef="brand">
           <th mat-header-cell *matHeaderCellDef>Brand</th>
@@ -88,7 +88,7 @@
         <h3>{{ selectedBrand }}</h3>
       </div>
 
-      <table mat-table [dataSource]="carsDataSource" class="mat-elevation-z8 demo-table">
+      <table mat-table [dataSource]="carsDataSource" class="mat-elevation-z8 demo-table mytabcls">
     <!-- Position Column -->
     <ng-container matColumnDef="position">
       <th mat-header-cell *matHeaderCellDef>No.</th>
@@ -130,7 +130,8 @@
 
   <mat-paginator [pageSizeOptions]="[5, 10, 20]"
                  showFirstLastButtons
-                 aria-label="Select page of periodic elements">
+                 aria-label="Select page of periodic elements"
+                 class="pgnt">
   </mat-paginator>
   
  

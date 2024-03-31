@@ -6,7 +6,7 @@
 
    <div>
     <h2>Common Parts</h2>
-    <table mat-table [dataSource]="commonPartsDataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="commonPartsDataSource" class="mat-elevation-z8 mytabcls">
         
       <!-- Name Column -->
       <ng-container matColumnDef="name">
@@ -48,13 +48,13 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumnsCommon"></tr>
       <tr mat-row *matRowDef="let part; columns: displayedColumnsCommon;"></tr>
     </table>
-    <mat-paginator #commonPaginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+    <mat-paginator #commonPaginator [pageSizeOptions]="[5, 10, 20]" class="pgnt"></mat-paginator>
   </div>
   
   
   <div>
     <h2>Specific Parts</h2>
-    <table mat-table [dataSource]="specificPartsDataSource" class="mat-elevation-z8">
+    <table mat-table [dataSource]="specificPartsDataSource" class="mat-elevation-z8 mytabcls">
       <!-- Name Column -->
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef>Name</th>
@@ -95,7 +95,7 @@
       <tr mat-header-row *matHeaderRowDef="displayedColumnsSpecific"></tr>
       <tr mat-row *matRowDef="let part; columns: displayedColumnsSpecific;"></tr>
     </table>
-    <mat-paginator #specificPaginator [pageSizeOptions]="[5, 10, 20]"></mat-paginator>
+    <mat-paginator #specificPaginator [pageSizeOptions]="[5, 10, 20]" class="pgnt"></mat-paginator>
   </div>
   
     

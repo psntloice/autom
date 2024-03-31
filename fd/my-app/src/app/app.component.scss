@@ -125,6 +125,27 @@ width: 100%;
     //   width: max-content;
     // }
 }
+@media screen and ((max-width: 1501px)) {
+
+
+ 
+  
+  .secside {
+
+    min-width:230px;
+  }
+  
+  .seccontent {
+    width: auto;
+    flex: 1; /* Allow seccontent to take up remaining space */
+    overflow: scroll;
+  }
+    //   .content {
+    //   flex-direction: row;
+    //   width: max-content;
+    // }
+}
+
 
 //   section{
 //     // display: flex;

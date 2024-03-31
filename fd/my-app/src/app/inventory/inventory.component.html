@@ -5,8 +5,8 @@
     <div class="mycarddiv">
             <!-- Inventory Table -->
             <h2>Inventory</h2>
-            <div class="mat-elevation-z8">
-              <table mat-table [dataSource]="inventoryDataSource" class="mat-elevation-z8">
+            <div class="mat-elevation-z8 mytabcls" >
+              <table mat-table [dataSource]="inventoryDataSource" class="mat-elevation-z8 mytabcls">
                 <!-- Item ID Column -->
                 <ng-container matColumnDef="itemId">
                   <th mat-header-cell *matHeaderCellDef>ID</th>
@@ -44,7 +44,7 @@
               </table>
           
               <!-- Paginator -->
-              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="pgnt"></mat-paginator>
             </div>
               
     </div>
