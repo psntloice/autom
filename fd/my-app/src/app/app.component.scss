@@ -112,11 +112,13 @@ width: 100%;
     top: 0; /* Position the sidebar at the top of the .content container */
     left: 0; /* Position the sidebar at the left edge of the .content container */
     max-width: 15vw;
+    z-index: 1000;
   }
   
   .seccontent {
     width: auto;
     flex: 1; /* Allow seccontent to take up remaining space */
+    overflow: scroll;
   }
     //   .content {
     //   flex-direction: row;

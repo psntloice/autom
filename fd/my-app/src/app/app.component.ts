@@ -16,6 +16,7 @@ import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
 
+import { Router, NavigationEnd } from '@angular/router';
 
 
 
@@ -37,7 +38,7 @@ export class AppComponent {
   faBell = faBell;
   faBars = faBars;
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(private breakpointObserver: BreakpointObserver, private router: Router) {}
 
   ngOnInit() {
     this.breakpointObserver.observe([
@@ -47,6 +48,12 @@ export class AppComponent {
       map(result => result.matches)
     ).subscribe(matches => {
       this.showSidebar = !matches;
+    });
+ 
+    this.router.events.subscribe(event => {
+      if (event instanceof NavigationEnd) {
+        this.showSidebar = false; // Assuming showSidebar controls the visibility of the sidebar
+      }
     });
   }
 }
