@@ -1,3 +1,41 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+
+$my-primary: mat.define-palette(
+  (
+    50: #e8eaf6,
+    100: #c5cae9,
+    200: #9fa8da,
+    300: #7986cb,
+    400: #5c6bc0,
+    500: #0c0c11, // This is the default primary color
+    600: #3949ab,
+    700: #303f9f,
+    800: #283593,
+    900: #1a237e,
+    A100: #8c9eff,
+    A200: #536dfe,
+    A400: #3d5afe,
+    A700: #304ffe
+  ),
+  500 // Default primary color
+);
+$my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+$my-theme: mat.define-light-theme((
+ color: (
+   primary: $my-primary,
+   accent: $my-accent,
+ ),
+ typography: mat.define-typography-config(),
+ density: 0,
+));
+
+// Emit theme-dependent styles for common features used across multiple components.
+@include mat.core-theme($my-theme);
+
 .content{
     display: flex;
     flex:1;
@@ -19,7 +57,43 @@ margin: 2vh;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+  ::ng-deep .tabpanel{
+    color:black;
+    background-color: black;
+  }
+  .mat-tab-label:not(.mat-tab-label-active) {
+    background-color: #744b4b; /* Set the background color of inactive tabs */
+    color: rgba(0, 0, 0, 0.6); /* Set the text color of inactive tabs */
+  }
+  .mat-tab-body-content:not(.mat-tab-body-active) {
+    background-color: #7a6464; /* Set the background color of inactive tabs */
+    color: rgba(0, 0, 0, 0.6); /* Set the text color of inactive tabs */
+  }
+  .mat-tab-header-pagination {
+    background-color: #b69b9b; /* Change background color */
+  }
   
+  .mat-tab-header-pagination .mat-tab-label {
+    color: rgba(0, 0, 0, 0.87); /* Change text color */
+  }
+  
+  .mat-tab-header-pagination .mat-ripple {
+    background-color: rgba(0, 0, 0, 0.04); /* Change ripple color */
+  }
+  
+  .mat-tab-label:not(.mat-tab-label-active) {
+    background-color: #333; /* Change background color of inactive tabs to blackish */
+    color: rgba(255, 255, 255, 0.7); /* Change text color of inactive tabs to light gray */
+  }
+  .mat-tab-group .mat-tab-label {
+    color: black;
+    background-color: black;
+  }
+  ::ng-deep .mat-tab-label {
+    color: black;
+    background-color: black;
+
+  }
   .form-group {
     margin-bottom: 20px;
   }
