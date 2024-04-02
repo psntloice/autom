@@ -30,11 +30,19 @@ margin: 2vh;
     font-weight: bold;
   }
   .mytabcls{
-    background-color: #afc591;
-    color:rgb(68, 99, 62);
+    background-color: #a8c799;
+    color:rgb(29, 48, 22);
 
 }
+:host { 
+  
+  --mat-table-row-item-label-text-color: #2b6444bd;
+  --mat-paginator-container-text-color: #2b6444;
+}
 .pgnt{
-  background-color: #8a9c71;
+  background-color: #92b391;
 
+}
+.mytext{
+  color:rgb(106, 134, 96);
 }

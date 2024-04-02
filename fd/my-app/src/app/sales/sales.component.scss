@@ -12,9 +12,19 @@ box-sizing: border-box;
 margin: 2vh;
 }
 .mytabcls{
-    background-color: #afc591;
+    background-color: #a8c799;
+    color:rgb(29, 48, 22);
+
+}
+:host { 
+  
+  --mat-table-row-item-label-text-color: #2b6444bd;
+  --mat-paginator-container-text-color: #2b6444;
 }
 .pgnt{
-    background-color: #8a9c71;
-  
-  }
+  background-color: #92b391;
+
+}
+.mytext{
+  color:rgb(106, 134, 96);
+}

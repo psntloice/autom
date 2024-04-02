@@ -1,116 +1,57 @@
 <section class="content">
 
-    <!-- <h1>{{ title }}</h1> -->
     
     <div class="mycarddiv">
-<!-- Order Form Component -->
-<!-- <form (ngSubmit)="submitOrder()" #orderForm="ngForm">
-    <label for="itemName">Item Name</label>
-    <input type="text" id="itemName" name="itemName" ngModel required>
+ 
+<mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+     
+  <mat-tab label="Make Order" class="tabpanel"> 
+    <ng-template mat-tab-label>
+      <span class="mtlabel">Make Order</span>
+    </ng-template>
+<div class="tabpanel">
+  <form class="order-form" (ngSubmit)="submitOrder()" #orderForm="ngForm">
+    <div class="form-group">
+      <label for="itemName">Item Name:</label>
+      <input type="text" id="itemName" name="itemName" ngModel required>
+    </div>
   
-    <label for="quantity">Quantity</label>
-    <input type="number" id="quantity" name="quantity" ngModel required>
+    <div class="form-group">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" ngModel required>
+    </div>
   
+    <!-- Add more form fields as needed -->
   
-    <button type="submit" [disabled]="orderForm.invalid">Submit Order</button>
-  </form> -->
-  <ul class="nav nav-tabs">
-    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-    <li class="nav-item"><a class="nav-link " href="#">Menu 1</a></li>
-    <li class="nav-item"><a class="nav-link " href="#">Menu 2</a></li>
-    <li class="nav-item"><a class="nav-link " href="#">Menu 3</a></li>
-  </ul>
-  <mat-tab-group>
-    <mat-tab>
-      <ng-template mat-tab-label>
-        First
-      </ng-template>
-      Content 1
+    <button type="submit" [disabled]="orderForm.invalid" class="submit-button">Submit Order</button>
+  </form> 
+</div>
+    
     </mat-tab>
-  
-    <mat-tab>
-      <ng-template mat-tab-label>
-        Second
-      </ng-template>
-      Content 2
-    </mat-tab>
-  
-    <mat-tab>
-      <ng-template mat-tab-label>
-        Third
-      </ng-template>
-  
-      Content 3
-    </mat-tab>
-  </mat-tab-group>
-
-  <nav mat-tab-nav-bar [backgroundColor]="background" [tabPanel]="tabPanel">
-    @for (link of links; track link) {
-      <a mat-tab-link
-        (click)="activeLink = link"
-        [active]="activeLink == link"> {{link}} </a>
-    }
-    <a mat-tab-link disabled>Disabled Link</a>
-  </nav>
-  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
 
 
-  <mat-tab-group>
-    <mat-tab>
+    <mat-tab label="Items Pending"> 
       <ng-template mat-tab-label>
-        <ng-container *cdkPortal>
-          <!-- Content for the tab label goes here -->
-          <!-- For example, an icon -->
-          <mat-icon>favorite</mat-icon>
-          <!-- <mat-tab-label>Tab Label</mat-tab-label> -->
-          <!-- Or a custom component -->
-        </ng-container>
+        <span class="mtlabel">Orders Pending</span>
       </ng-template>
-      <!-- Content for the tab goes here -->
-    </mat-tab>
-    <!-- Add more tabs as needed -->
-  </mat-tab-group>
 
-  <mat-tab-group color="primary">
-        <mat-tab label="Tab 1">
-      <ng-template mat-tab-label>
-        <span>Tab 1 Label</span>
-      </ng-template>
-      Tab 1 Content
+
+
+
+
+
     </mat-tab>
-    <mat-tab label="Tab 2">
+
+    <mat-tab label="Done" >    
       <ng-template mat-tab-label>
-        <span>Tab 2 Label</span>
+        <span class="mtlabel">Orders Completed</span>
       </ng-template>
-      Tab 2 Content
+
+
+
+
+
     </mat-tab>
-  </mat-tab-group>
-  
-  <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="center">
-    <mat-tab label="First">Content 1</mat-tab>
-    <mat-tab label="Second">Content 2</mat-tab>
-    <mat-tab label="Third">Content 3</mat-tab>
-  </mat-tab-group>
-  
-  <mat-tab-group mat-align-tabs="end">
-    <mat-tab label="Make Order" class="tabpanel"> Content 1
-      <form class="order-form" (ngSubmit)="submitOrder()" #orderForm="ngForm">
-        <div class="form-group">
-          <label for="itemName">Item Name:</label>
-          <input type="text" id="itemName" name="itemName" ngModel required>
-        </div>
-      
-        <div class="form-group">
-          <label for="quantity">Quantity:</label>
-          <input type="number" id="quantity" name="quantity" ngModel required>
-        </div>
-      
-        <!-- Add more form fields as needed -->
-      
-        <button type="submit" [disabled]="orderForm.invalid" class="submit-button">Submit Order</button>
-      </form> </mat-tab>
-    <mat-tab label="Items Peding"> Content 2 </mat-tab>
-    <mat-tab label="Second" style="color: black;"> Content 2 </mat-tab>
   
     </mat-tab-group>
   

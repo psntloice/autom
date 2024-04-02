@@ -11,7 +11,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
 import { faBars } from '@fortawesome/free-solid-svg-icons';
-
+import { ThemePalette } from '@angular/material/core';
 
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { map } from 'rxjs/operators';
@@ -29,6 +29,8 @@ import { Router, NavigationEnd } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
+
+
   showSidebar = true;
 
   toggleSidebar() {

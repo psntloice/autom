@@ -4,8 +4,8 @@
     
     <div class="mycarddiv">
 
-      <div>
-        <h3>Car Brands</h3>
+      <div class="mytext">
+        <h4>Car Brands</h4>
       </div>
   
       <table mat-table [dataSource]="brandsDataSource" class="mat-elevation-z8 demo-table mytabcls">
@@ -80,12 +80,12 @@
                      aria-label="Select page of car brands">
       </mat-paginator> -->
 
-      <div style="margin-top: 40px;">
+      <div style="margin-top: 40px;" class="mytext">
                 <button (click)="switchCarType('mercedes')">Mercedes</button>
         <button (click)="switchCarType('toyota')">Toyota</button>
         <button (click)="switchCarType('suzuki')">Suzuki</button>
 
-        <h3>{{ selectedBrand }}</h3>
+        <h4>{{ selectedBrand }}</h4>
       </div>
 
       <table mat-table [dataSource]="carsDataSource" class="mat-elevation-z8 demo-table mytabcls">

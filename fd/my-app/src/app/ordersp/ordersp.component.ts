@@ -10,8 +10,7 @@ import { CdkPortal } from '@angular/cdk/portal';
 @Component({
   selector: 'app-ordersp',
   standalone: true,
- 
-  imports: [FormsModule, MatIconModule, MatTabsModule, MatTabLabel, CdkPortal],
+imports: [FormsModule, MatIconModule, MatTabsModule, MatTabLabel, CdkPortal],
   templateUrl: './ordersp.component.html',
   styleUrl: './ordersp.component.scss'
 })
