@@ -3,9 +3,52 @@
     <!-- <h1>{{ title }}</h1> -->
     
     <div class="mycarddiv">
-            <!-- Employees Table -->
-            <h2>Employees</h2>
-            <div class="mat-elevation-z8 mytabcls">
+
+      <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+     
+      
+      
+      
+          <mat-tab label="Add Employee" > 
+            <ng-template mat-tab-label>
+              <span class="mtlabel">Add Employee</span>
+            </ng-template>
+      
+            <div class="tabpanel">
+              <!-- <form class="order-form" (ngSubmit)="submitOrder()" #orderForm="ngForm"> -->
+                <form class="order-form" >
+
+                <div class="form-group">
+                  <label for="itemName">Item Name:</label>
+                  <input type="text" id="itemName" name="itemName" ngModel required>
+                </div>
+              
+                <div class="form-group">
+                  <label for="quantity">Quantity:</label>
+                  <input type="number" id="quantity" name="quantity" ngModel required>
+                </div>
+              
+                <!-- Add more form fields as needed -->
+              
+                <!-- <button type="submit" [disabled]="orderForm.invalid" class="submit-button">Submit Order</button> -->
+                <button >Submit Order</button>
+
+              </form> 
+
+            </div>
+                
+      
+      
+      
+      
+          </mat-tab>
+      
+          <mat-tab label="Employees in">    
+            <ng-template mat-tab-label>
+              <span class="mtlabel">Employees in</span>
+            </ng-template>
+      
+            <div class="mat-elevation-z8 tabpanel">
               <table mat-table [dataSource]="employeesDataSource" class="mat-elevation-z8 mytabcls">
                 <!-- Employee ID Column -->
                 <ng-container matColumnDef="employeeId">
@@ -47,6 +90,13 @@
               <!-- Paginator -->
               <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="pgnt"></mat-paginator>
             </div>
+      
+      
+      
+          </mat-tab>
+        
+          </mat-tab-group>
+            
               
     </div>
     

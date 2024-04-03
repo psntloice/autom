@@ -3,14 +3,12 @@ import { Component, OnInit, Input } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {MatTabsModule} from '@angular/material/tabs';
 import {ThemePalette} from '@angular/material/core';
-import { MatIconModule } from '@angular/material/icon';
 import { MatTabLabel } from '@angular/material/tabs';
-import { CdkPortal } from '@angular/cdk/portal';
 
 @Component({
   selector: 'app-ordersp',
   standalone: true,
-imports: [FormsModule, MatIconModule, MatTabsModule, MatTabLabel, CdkPortal],
+imports: [FormsModule, MatTabsModule, MatTabLabel],
   templateUrl: './ordersp.component.html',
   styleUrl: './ordersp.component.scss'
 })

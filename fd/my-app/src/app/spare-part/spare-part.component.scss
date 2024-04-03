@@ -11,6 +11,28 @@ justify-content: space-between;
 box-sizing: border-box;
 margin: 2vh;
 }
+
+
+
+::ng-deep .mat-mdc-tab.mdc-tab.mdc-tab.mdc-tab {
+  background-color:#dafac5;
+ 
+}
+  .mtlabel{
+    // color:#0f170a;
+    color:#343633;
+
+  }
+
+
+.tabpanel{
+  margin-top: 30px;
+}
+
+
+
+
+
 .mytabcls{
     background-color: #a8c799;
     color:rgb(29, 48, 22);

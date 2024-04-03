@@ -2,6 +2,11 @@ import {AfterViewInit, Component, ViewChild} from '@angular/core';
 import {MatTableDataSource, MatTableModule} from '@angular/material/table';
 import {MatPaginator, MatPaginatorModule} from '@angular/material/paginator';
 import {MatDividerModule} from '@angular/material/divider';
+import { FormsModule } from '@angular/forms';
+import {MatTabsModule} from '@angular/material/tabs';
+import {ThemePalette} from '@angular/material/core';
+import { MatTabLabel } from '@angular/material/tabs';
+
 
 export interface CommonPart {
   name: string;
@@ -27,7 +32,7 @@ export interface SpecificPart {
 @Component({
   selector: 'app-spare-part',
   standalone: true,
-  imports: [MatTableModule, MatPaginatorModule,],
+  imports: [FormsModule, MatTabsModule, MatTabLabel, MatTableModule, MatPaginatorModule,],
   templateUrl: './spare-part.component.html',
   styleUrl: './spare-part.component.scss'
 })

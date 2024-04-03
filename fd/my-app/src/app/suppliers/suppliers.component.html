@@ -3,53 +3,102 @@
     <!-- <h1>{{ title }}</h1> -->
     
     <div class="mycarddiv">
-            <!-- Suppliers Table -->
-            <h2>Suppliers</h2>
-            <div class="mat-elevation-z8">
-              <table mat-table [dataSource]="suppliersDataSource" class="mat-elevation-z8 mytabcls">
-                <!-- Supplier ID Column -->
-                <ng-container matColumnDef="supplierId">
-                  <th mat-header-cell *matHeaderCellDef>ID</th>
-                  <td mat-cell *matCellDef="let supplier">{{ supplier.supplierId }}</td>
-                </ng-container>
-          
-                <!-- Name Column -->
-                <ng-container matColumnDef="name">
-                  <th mat-header-cell *matHeaderCellDef>Name</th>
-                  <td mat-cell *matCellDef="let supplier">{{ supplier.name }}</td>
-                </ng-container>
-          
-                <!-- Address Column -->
-                <ng-container matColumnDef="address">
-                  <th mat-header-cell *matHeaderCellDef>Address</th>
-                  <td mat-cell *matCellDef="let supplier">{{ supplier.address }}</td>
-                </ng-container>
-          
-                <!-- Contact Person Column -->
-                <ng-container matColumnDef="contactPerson">
-                  <th mat-header-cell *matHeaderCellDef>Contact Person</th>
-                  <td mat-cell *matCellDef="let supplier">{{ supplier.contactPerson }}</td>
-                </ng-container>
-          
-                <!-- Email Column -->
-                <ng-container matColumnDef="email">
-                  <th mat-header-cell *matHeaderCellDef>Email</th>
-                  <td mat-cell *matCellDef="let supplier">{{ supplier.email }}</td>
-                </ng-container>
-          
-                <!-- Phone Number Column -->
-                <ng-container matColumnDef="phoneNumber">
-                  <th mat-header-cell *matHeaderCellDef>Phone Number</th>
-                  <td mat-cell *matCellDef="let supplier">{{ supplier.phoneNumber }}</td>
-                </ng-container>
-          
-                <tr mat-header-row *matHeaderRowDef="displayedColumnsSuppliers"></tr>
-                <tr mat-row *matRowDef="let supplier; columns: displayedColumnsSuppliers;"></tr>
-              </table>
-          
-              <!-- Paginator -->
-              <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="pgnt"></mat-paginator>
-            </div>
+      <mat-tab-group mat-stretch-tabs="false" mat-align-tabs="start">
+     
+      
+      
+      
+        <mat-tab label="Add Suppliers" class="tabpanel"> 
+          <ng-template mat-tab-label>
+            <span class="mtlabel">Add Suppliers</span>
+          </ng-template>
+    
+          <div class="tabpanel">
+            <!-- <form class="order-form" (ngSubmit)="submitOrder()" #orderForm="ngForm"> -->
+              <form class="order-form" >
+
+              <div class="form-group">
+                <label for="itemName">Item Name:</label>
+                <input type="text" id="itemName" name="itemName" ngModel required>
+              </div>
+            
+              <div class="form-group">
+                <label for="quantity">Quantity:</label>
+                <input type="number" id="quantity" name="quantity" ngModel required>
+              </div>
+            
+              <!-- Add more form fields as needed -->
+            
+              <!-- <button type="submit" [disabled]="orderForm.invalid" class="submit-button">Submit Order</button> -->
+              <button >Submit Order</button>
+
+            </form> 
+
+          </div>
+              
+    
+    
+    
+    
+        </mat-tab>
+    
+        <mat-tab label="Suppliers in" >    
+          <ng-template mat-tab-label>
+            <span class="mtlabel">Suppliers</span>
+          </ng-template>
+    
+          <div class="mat-elevation-z8" class="tabpanel">
+            <table mat-table [dataSource]="suppliersDataSource" class="mat-elevation-z8 mytabcls">
+              <!-- Supplier ID Column -->
+              <ng-container matColumnDef="supplierId">
+                <th mat-header-cell *matHeaderCellDef>ID</th>
+                <td mat-cell *matCellDef="let supplier">{{ supplier.supplierId }}</td>
+              </ng-container>
+        
+              <!-- Name Column -->
+              <ng-container matColumnDef="name">
+                <th mat-header-cell *matHeaderCellDef>Name</th>
+                <td mat-cell *matCellDef="let supplier">{{ supplier.name }}</td>
+              </ng-container>
+        
+              <!-- Address Column -->
+              <ng-container matColumnDef="address">
+                <th mat-header-cell *matHeaderCellDef>Address</th>
+                <td mat-cell *matCellDef="let supplier">{{ supplier.address }}</td>
+              </ng-container>
+        
+              <!-- Contact Person Column -->
+              <ng-container matColumnDef="contactPerson">
+                <th mat-header-cell *matHeaderCellDef>Contact Person</th>
+                <td mat-cell *matCellDef="let supplier">{{ supplier.contactPerson }}</td>
+              </ng-container>
+        
+              <!-- Email Column -->
+              <ng-container matColumnDef="email">
+                <th mat-header-cell *matHeaderCellDef>Email</th>
+                <td mat-cell *matCellDef="let supplier">{{ supplier.email }}</td>
+              </ng-container>
+        
+              <!-- Phone Number Column -->
+              <ng-container matColumnDef="phoneNumber">
+                <th mat-header-cell *matHeaderCellDef>Phone Number</th>
+                <td mat-cell *matCellDef="let supplier">{{ supplier.phoneNumber }}</td>
+              </ng-container>
+        
+              <tr mat-header-row *matHeaderRowDef="displayedColumnsSuppliers"></tr>
+              <tr mat-row *matRowDef="let supplier; columns: displayedColumnsSuppliers;"></tr>
+            </table>
+        
+            <!-- Paginator -->
+            <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons class="pgnt"></mat-paginator>
+          </div>
+    
+    
+        </mat-tab>
+      
+        </mat-tab-group>
+                    
+     
               
     </div>
     
